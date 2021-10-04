@@ -32,17 +32,23 @@ function handlerFileUpload(e) {
 
     // 生成图片
     const img = document.createElement('img');
-    domtoimage.toBlob(previewContainer, {
+    domtoimage.toPng(previewContainer, {
       quality: 1,
       height: preview.height,
       width: preview.width,
     }).then((url) => {
-      img.src = URL.createObjectURL(url);
+      // img.src = URL.createObjectURL(url);
+      img.src = url;
       previewContainer.removeChild(preview);
       previewContainer.removeChild(background);
       previewContainer.appendChild(img);
       const [filename, suffix] = getSuffix(fileList[0].name);
-      window.saveAs(url, `${filename}_${Date.now()}.${suffix}`);
+      // window.saveAs(url, `${filename}_${Date.now()}.${suffix}`);
+      const btn = document.createElement('a');
+      btn.href = url;
+      btn.download = `${filename}_${Date.now()}.${suffix}`;
+      btn.click();
+
     });
   }
 }
