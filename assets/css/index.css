@@ -1,0 +1,19 @@
+.background {
+  display: none;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 50%,rgba(255, 255, 255, 1)), url('../imgs/hongqi.png');
+  background-size: cover;
+  mix-blend-mode: multiply;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+#preview-container {
+  position: relative;
+}
+
+#preview-container img {
+  position: absolute;
+}

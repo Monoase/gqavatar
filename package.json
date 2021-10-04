@@ -1,0 +1,16 @@
+{
+  "name": "hongqi",
+  "version": "0.0.1",
+  "description": "avatar generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "koa": "^2.13.3",
+    "koa-static": "^5.0.0"
+  }
+}
